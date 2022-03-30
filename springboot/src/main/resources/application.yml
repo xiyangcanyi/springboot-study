@@ -1,0 +1,69 @@
+#普通的key-value
+#对空格的要求十分严格
+#name: zhaoyaopeng
+##对象
+#student:
+#  name: zyp
+#  age: 5
+#
+#
+#
+#
+##行内写法
+#student: {name: zhao,age: 3}
+#
+##数组
+#pets:
+#  - cat
+#  - dog
+#  - pig
+#行内写法
+#pets: [cat,dog,pig]
+#server:
+#  port:8082
+person:
+  name: zyp${random.uuid}
+  age: 3
+  happy: false
+  birth: 2022/11/02
+  maps: {k1: v1,k2: v2}
+  lists:
+    - code
+    - music
+    - girl
+  dog:
+    name: 旺财
+    age: 3
+#多环境选择激活那个配置文件
+#server:
+#  port: 8082
+#spring:
+#  profiles:
+#    active: dev
+#---
+#server:
+#  port: 8083
+#spring:
+#  profiles: dev
+#---
+#server:
+#  port: 8084
+#spring:
+#  profiles: test
+#配置文件能写什么：
+#在配置文件存在一个固有的规律
+  #xxxAutoConfiguration ：默认值 @#xxxProperties 和配置文件.yaml/.yml 配置文件绑定，就可以自定义文件的配置
+#  1、SpringBoot启动会加载大量的自动配置类
+#
+#  2、我们看我们需要的功能有没有在SpringBoot默认写好的自动配置类当中；
+#
+#  3、我们再来看这个自动配置类中到底配置了哪些组件；（只要我们要用的组件存在在其中，我们就不需要再手动配置了）
+#
+#  4、给容器中自动配置类添加组件的时候，会从properties类中获取某些属性。我们只需要在配置文件中指定这些属性的值即可；
+#
+#  xxxxAutoConfigurartion：自动配置类；给容器中添加组件
+#
+#  xxxxProperties:封装配置文件中相关属性；
+
+
+
